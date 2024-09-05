@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            .grid {
+                background-color: #ddd;
+                padding: 20px;
+                width: 800px;
+                height: 400px;
+                margin: 20px auto;
+                display: grid;
+                grid-template-columns: auto 1fr 1fr auto;
+                grid-template-rows: 1fr auto;
+                gap: 20px;
+            }
+
+            .grid div {
+                background-color: #403f3f;
+                color: #fff;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+        </style>
+    </head>
+        
+    <body>
+        <div class="grid">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+    </body>
+</html>

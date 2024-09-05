@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            div {
+                background-color: #eeeeee;
+                width: 600px;
+                font-size: 30px;
+                letter-spacing: 5px;
+                font-weight: bold;
+                text-align: center;
+                padding: 30px;
+                margin: 20px auto;
+                background-image: linear-gradient(
+                    to right,
+                    #f44336 5px, 
+                    transparent 5px,
+                    transparent 595px,
+                    #673ab7 595px);
+                position: relative;
+            }
+
+            div::before {
+                content: "";
+                width: 100%;
+                height: 5px;
+                position: absolute;
+                top: -5px;
+                left: 0;
+                background-image: linear-gradient(
+                    to right,
+                    #f44336 20%, 
+                    #03a9f4 20%,
+                    #03a9f4 40%,
+                    #4caf50 40%,
+                    #4caf50 60%, 
+                    #e91e63 60%,
+                    #e91e63 80%,
+                    #673ab7 80%);
+            }
+
+            div::after {
+                content: "";
+                width: 100%;
+                height: 5px;
+                position: absolute;
+                bottom: -5px;
+                left: 0px;
+                background-image: linear-gradient(
+                    to right,
+                    #f44336 20%, 
+                    #03a9f4 20%,
+                    #03a9f4 40%,
+                    #4caf50 40%,
+                    #4caf50 60%, 
+                    #e91e63 60%,
+                    #e91e63 80%,
+                    #673ab7 80%);
+            }
+
+            div::first-letter {
+                color: red;
+            }
+        </style>
+    </head>
+        
+    <body>
+        <div>Elzero</div>
+    </body>
+</html>

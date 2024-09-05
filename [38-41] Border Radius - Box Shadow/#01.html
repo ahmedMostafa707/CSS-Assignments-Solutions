@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            div {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                background-color: #eeeeee;
+                margin: 50px;
+                border: 2px solid black;
+                border-radius: 50%;
+                box-shadow: -5px -5px #e91e63, 5px 5px #2196f3;
+                counter-increment: count;
+                position: relative;
+            }
+
+            div::before {
+                content: counter(count);
+                background-color: black;
+                color: white;
+                width: 25px;
+                height: 25px;
+                font-size: 20px;
+                text-align: center;
+                border-radius: 50%;
+                position: absolute;
+                left: calc((96px - 25px) / 2);
+                top: -13.5px;
+            }
+
+            div::after {
+                content: "Element";
+                position: absolute;
+                left: calc((96px - 58.7px) / 2);
+                top: calc((96px - 18.4px) / 2);
+            }
+        </style>
+    </head>
+        
+    <body>
+        <div></div>
+        <div></div>
+        <div></div>
+    </body>
+</html>

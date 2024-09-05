@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+
+            body {
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            div {
+                background-color: #eee;
+                width: 500px;
+                padding: 30px;
+                margin: 60px auto;
+                position: relative;
+            }
+
+            /* ---------------My Framework-------------- */
+            .arrow::before {
+                content: "";
+                width: 0;
+                height: 0;
+                border: 20px solid transparent;
+                position: absolute;
+            }
+
+            .arrow.top::before {
+                top: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-bottom-color: #eee;
+            }
+
+            .arrow.bottom::before {
+                bottom: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-top-color: #eee;
+            }
+
+            .arrow.right::before {
+                right: -40px;
+                top: 50%;
+                transform: translateY(-50%);
+                border-left-color: #eee;
+            }
+
+            .arrow.left::before {
+                left: -40px;
+                top: 50%;
+                transform: translateY(-50%);
+                border-right-color: #eee;
+            }
+            /* ----------------------------------------- */
+        </style>
+    </head>
+
+    <body>
+        <div class="arrow top">Elzero</div>
+        <div class="arrow right">Elzero</div>
+        <div class="arrow bottom">Elzero</div>
+        <div class="arrow left">Elzero</div>
+    </body>
+</html>

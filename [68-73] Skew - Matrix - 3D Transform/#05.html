@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                margin: 0;
+            }
+            
+            body {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                perspective: 400px;
+            }
+
+            div {
+                width: 200px;
+                height: 200px;
+                position: relative;
+                transition: 0.5s linear;
+                transform-style: preserve-3d;
+            }
+
+            div::before {
+                content: "Front";
+                background-color: #fa3664;
+            }
+
+            div::after {
+                content: "Back";
+                background-color: #0075ff;
+                backface-visibility: hidden;
+                /* transform: rotateY(180deg); */
+                transform: rotateX(180deg);
+            }
+
+            div::before, 
+            div::after {
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            div:hover {
+                /* transform: rotateY(-180deg); */
+                transform: rotateX(-180deg);
+            }
+        </style>
+    </head>
+        
+    <body>
+        <div></div>
+    </body>
+</html>

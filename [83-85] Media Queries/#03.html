@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+
+            :root {
+                --main-space: 20px;
+            }
+
+            .container {
+                padding: var(--main-space);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .product {
+                background-color: #eee;
+                width: 100%;
+                padding: var(--main-space);
+                margin-bottom: var(--main-space);
+                text-align: center;
+            }
+
+            @media (min-width: 992px) and (max-width: 1199px) { /* Medium Screens */
+                .product:not(:first-child) {
+                    width: calc((100% - 40px) / 3);
+                }
+
+                .product h3 {
+                    color: red;
+                }
+            }
+
+            @media (min-width: 1200px) { /* Large Screens */
+                .product:not(:first-child):not(:last-child) {
+                    width: calc((100% - 20px) / 2);
+                }
+
+                .product h3 {
+                    color: #20a296;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="product">
+                <h3>Product One</h3>
+                <p>This is Product</p>
+            </div>
+            <div class="product">
+                <h3>Product Two</h3>
+                <p>This is Product</p>
+            </div>
+            <div class="product">
+                <h3>Product Three</h3>
+                <p>This is Product</p>
+            </div>
+            <div class="product">
+                <h3>Product Four</h3>
+                <p>This is Product</p>
+            </div>
+        </div>
+    </body>
+</html>

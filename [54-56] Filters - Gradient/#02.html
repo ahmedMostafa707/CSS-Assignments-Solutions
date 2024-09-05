@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            form {
+                width: 600px;
+                margin: auto;
+            }
+
+            input {
+                width: 100%;
+                background-color: #eeeeee;
+                padding: 20px;
+                margin-top: 20px;
+                border: none;
+                outline: none;
+                caret-color: #ff6347;
+            }
+
+            .input-style {
+                position: relative;
+            }
+
+            .input-style::after {
+                content: "";
+                width: 100%;
+                height: 5px;
+                background-image: linear-gradient(
+                    to right,
+                    #ff6347 50%,
+                    #009688 50%
+                );
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        </style>
+    </head>
+        
+    <body>
+        <form action="">
+            <div class="input-style"><input  type="text" placeholder="One"></div>
+            <div class="input-style"><input type="text" placeholder="Two"></div>
+            <div class="input-style"><input type="text" placeholder="Three"></div>
+        </form>
+    </body>
+</html>

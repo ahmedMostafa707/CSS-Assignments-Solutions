@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            .main-list {
+                width: 400px;
+                margin: 20px auto;
+                list-style: none;
+                padding: 0;
+            }
+
+            .html-list, .css-list, .js-list {
+                background-color: #eeeeee;
+                margin-bottom: 20px;
+                padding: 10px;
+            }
+
+            .html-list li, .css-list li, .js-list li {
+                background-color: #ffffff;
+                margin-top: 10px;
+                padding: 10px;
+            }
+
+            .js-list ul {
+                list-style-position: inside;
+                padding: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <ul class="main-list">
+            <li class="html-list">
+                HTML
+                <ol start="10">
+                    <li>Slim</li>
+                    <li>Pugjs</li>
+                    <li>HAML</li>
+                </ol>
+            </li>
+            <li class="css-list">
+                CSS
+                <ol type="I" start="10">
+                    <li>SASS</li>
+                    <li>LESS</li>
+                    <li>PostCSS</li>
+                </ol>
+            </li>
+            <li class="js-list">
+                JavaScript
+                <ul>
+                    <li>Vuejs</li>
+                    <li>Sveltejs</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

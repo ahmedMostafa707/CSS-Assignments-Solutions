@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+
+            :root {
+                --main-color: #eeeeee;
+                --secondry-color: #d4d4d4;
+                --main-padding: 10px;
+                --main-margin: 10px
+            }
+
+            .page {
+                background-color: var(--main-color);
+                padding: var(--main-padding);
+                height: 100vh;
+            }
+
+            .page .header {
+                height: 40px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .page .header .logo {
+                background-color: var(--secondry-color);
+                width: 100px;
+                text-align: center;
+                padding: var(--main-padding);
+                margin-right: var(--main-margin);
+            }
+
+            .page .header .links {
+                background-color: var(--secondry-color);
+                padding: var(--main-padding);
+                list-style: none;
+                flex-grow: 1;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .page .header .links li {
+                margin-left: var(--main-margin);
+            }
+            
+            .page .main-area {
+                height: calc(100% - 100px);
+                margin-top: var(--main-margin);
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .page .main-area .content {
+                flex-grow: 1;
+                padding: var(--main-padding);
+                background-color: var(--secondry-color);
+            }
+
+            .page .main-area .sidebar {
+                min-width: 25%;
+                padding: var(--main-padding);
+                margin-left: var(--main-margin);
+                background-color: var(--secondry-color);
+            }
+
+            .footer {
+                background-color: var(--secondry-color);
+                padding: var(--main-padding);
+                margin-top: var(--main-margin);
+                height: 40px;
+                display: flex;
+                justify-content: space-between;
+            }
+        </style>
+    </head>
+        
+    <body>
+        <div class="page">
+            <div class="header">
+                <div class="logo">Logo</div>
+                <ul class="links">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="main-area">
+                <div class="content">Content</div>
+                <div class="sidebar">Sidebar</div>
+            </div>
+            <div class="footer">
+                <div class="copyright">Copyright 2021</div>
+                <div class="design">Designed By Elzero</div>
+            </div>
+        </div>
+    </body>
+</html>

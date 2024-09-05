@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+
+            .layout {
+                height: 100vh;
+                color: #fff;
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+                grid-template-rows: 50px auto 50px;
+                grid-template-areas: "head head head head head head head head head head"
+                                        "main main main main main main main side side side"
+                                        "foot foot foot foot foot foot foot foot foot foot";
+            }
+
+            header {
+                grid-area: head;
+                padding: 10px;
+                background-color: #03a9f4;
+            }
+
+            header::before {
+                content: "Header";
+            }
+
+            section {
+                grid-area: main;
+                padding: 10px;
+                background-color: #ff5722;
+            }
+
+            section::before {
+                content: "Section";
+            }
+
+            aside {
+                grid-area: side;
+                padding: 10px;
+                background-color: #607d8b;
+            }
+
+            aside::before {
+                content: "Aside";
+            }
+
+            footer {
+                grid-area: foot;
+                padding: 10px;
+                background-color: #009688;
+            }
+
+            footer::before {
+                content: "Footer";
+            }
+        </style>
+    </head>
+        
+    <body>
+        <div class="layout">
+            <header></header>
+            <section></section>
+            <aside></aside>
+            <footer></footer>
+        </div>
+    </body>
+</html>

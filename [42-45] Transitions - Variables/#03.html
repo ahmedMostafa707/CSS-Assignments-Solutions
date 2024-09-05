@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            :root {
+                --mainColor: #009688;
+                --mainPadding: 10px;
+            }
+
+            div {
+                width: 500px;
+                margin: 20px auto;
+                color: var(--mainColor, red);
+                padding: var(--mainPadding, 10px);
+                border: 2px solid var(--mainColor, black);
+            }
+        </style>
+    </head>
+        
+    <body>
+        <div>Element</div>
+        <div>Element</div>
+        <div>Element</div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+
+            body {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            div {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 10px solid #ed1f62;
+                border-right-color: transparent;
+                position: relative;
+                animation: spin 1s infinite linear;
+            }
+
+            div:hover {
+                animation-play-state: paused;
+            }
+
+            div::before {
+                content: "";
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                box-sizing: border-box;
+                border: 10px solid #2990e5;
+                border-left-color: transparent;
+                position: absolute;
+                top: -25px;
+                left: -25px;
+            }
+
+            div::after {
+                content: "";
+                width: 110px;
+                height: 110px;
+                border-radius: 50%;
+                box-sizing: border-box;
+                border: 10px solid #ffa500;
+                border-top-color: transparent;
+                position: absolute;
+                top: -40px;
+                left: -40px;
+            }
+
+            @keyframes spin {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+        
+    <body>
+        <div></div>
+    </body>
+</html>

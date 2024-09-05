@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            .grid {
+                background-color: #ddd;
+                padding: 20px;
+                width: 800px;
+                height: 400px;
+                margin: 20px auto;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: auto 1fr;
+                gap: 20px;
+            }
+
+            .grid div {
+                padding: 10px;
+                background-color: #607d8b;
+                counter-increment: count;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-weight: bold;
+            }
+
+            .grid div::before {
+                content: "Element";
+                margin-right: 5px;
+            }
+
+            .grid div::after {
+                content: counter(count);
+            }
+        </style>
+    </head>
+        
+    <body>
+        <div class="grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+
+            .container {
+                width: 700px;
+                height: 600px;
+                padding: 20px;
+                margin: 20px auto;
+                box-shadow: 1px 1px 5px #d4d4d4;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 30px;
+            }
+
+            .e, .l {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(7, 1fr);
+                position: relative;
+            }
+            
+            .e div, .l div {
+                background-color: #000;
+            }
+
+            .e-1, .l-1{
+                grid-area: 1 / 1 / 8 / 2;
+            }
+
+            .e-2 {
+                grid-area: 1 / 2 / 2 / 5;
+            }
+
+            .e-3 {
+                grid-area: 4 / 2 / 5 / 5;
+            }
+
+            .e-4, .l-2 {
+                grid-area: 7 / 2 / 8 / 5;
+            }
+
+            .l::before {
+                content: "";
+                width: 50px;
+                height: 50px;
+                background-color: #ffa500;
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+                animation: l-move 3s linear forwards;
+            }
+
+            .e::before {
+                content: "";
+                width: 50px;
+                height: 50px;
+                background-color: #ffa500;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                animation: e-move 3s linear 3s;
+            }
+
+            @keyframes l-move {
+                35% {
+                    bottom: 15px;
+                    right: 250px;
+                    opacity: 1;
+                }
+
+                70% {
+                    bottom: 495px;
+                    right: 250px;
+                    opacity: 1;
+                }
+
+                100% {
+                    bottom: 495px;
+                    right: 250px;
+                    opacity: 0;
+                }
+            }
+
+            @keyframes e-move {
+                10%, 90% {
+                    top: 15px;
+                    right: 250px;
+                }
+
+                20% {
+                    top: 255px;
+                    right: 250px;
+                }
+
+                30% {
+                    top: 255px;
+                    right: 15px;
+                }
+
+                40%, 80% {
+                    top: 255px;
+                    right: 250px;
+                }
+
+                50%, 70% {
+                    top: 495px;
+                    right: 250px;
+                }
+
+                60% {
+                    top: 495px;
+                    right: 15px;
+                }
+            }
+        </style>
+    </head>
+        
+    <body>
+        <div class="container">
+            <div class="e">
+                <div class="e-1"></div>
+                <div class="e-2"></div>
+                <div class="e-3"></div>
+                <div class="e-4"></div>
+            </div>
+            <div class="l">
+                <div class="l-1"></div>
+                <div class="l-2"></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            :root {
+                --main-color: #009688;
+            }
+
+            body {
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            h1 {
+                width: fit-content;
+                padding: 20px 15px 20px 60px;
+                margin: 50px auto;
+                background-color: var(--main-color);
+                color: #ffffff;
+                font-size: 30px;
+                font-weight: bold;
+                position: relative;
+            }
+
+            h1::before {
+                content: "";
+                width: 25px;
+                height: 100%;
+                background-color: var(--main-color);
+                position: absolute;
+                top: 0;
+                left: -15px;
+                border-right: 5px solid #fff;
+                transform: skew(20deg);
+            }
+        </style>
+    </head>
+        
+    <body>
+        <h1>Elzero</h1>
+    </body>
+</html>

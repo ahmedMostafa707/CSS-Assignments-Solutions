@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            
+            .parent {
+                width: 500px;
+                height: 200px;
+                background-color: #f2f2f4;
+                text-align: center;
+                padding: 20px;
+                margin: 40px auto;
+                transition: margin 0.5s linear;
+            }
+
+            .child {
+                background-color: #dedede;
+                padding: 20px;
+                margin-top: 20px;
+                transition: margin 0.5s 0.5s linear;
+            }
+
+            .parent:hover {
+                margin-top: 20px;
+            }
+
+            .parent:hover .child {
+                margin-top: 40px;
+            }
+        </style>
+    </head>
+        
+    <body>
+        <div class="parent">
+            Will Go Up Hover in Half Second
+            <div class="child">
+                Will Go Down After Half Second
+            </div>
+        </div>
+    </body>
+</html>

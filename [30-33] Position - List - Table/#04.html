@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            table {
+                width: 700px;
+                margin: 20px auto;
+                text-align: center;
+                border-bottom: 2px solid #009688;
+            }
+
+            table caption {
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+            th {
+                background-color: #404040;
+                color: #ffffff;
+                padding: 15px;
+            }
+            
+            td {
+                background-color: #eeeeee;
+                padding: 15px;
+            }
+
+            td img {
+                width: 50px;
+            }
+
+            td button {
+                padding: 5px;
+                border: none;
+                cursor: pointer;
+                font-weight: bold;
+                color: #ffffff;
+            }
+
+            td .view {
+                width: 50px;
+                background-color: #03a9f4;
+            }
+
+            td .delete {
+                width: 55px;
+                background-color: #e91e63;
+            }
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <caption>Developers Rating</caption>
+            <thead>
+                <tr>
+                    <th>Avatar</th>
+                    <th>Group</th>
+                    <th>Name</th>
+                    <th>Points</th>
+                    <th>Control</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="Files/face1.jpg" alt=""></td>
+                    <td>Ninja</td>
+                    <td>Ahmed Mohamed</td>
+                    <td>120</td>
+                    <td>
+                        <button class="view">View</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="Files/face2.jpg" alt=""></td>
+                    <td rowspan="2">Shades</td>
+                    <td>Shady Nabil</td>
+                    <td>180</td>
+                    <td>
+                        <button class="view">View</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="Files/face1.jpg" alt=""></td>
+                    <td>Eman Mohamed</td>
+                    <td>160</td>
+                    <td>
+                        <button class="view">View</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="Files/face2.jpg" alt=""></td>
+                    <td rowspan="2">Valhala</td>
+                    <td>Mohamed Ibrahim</td>
+                    <td>190</td>
+                    <td>
+                        <button class="view">View</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="Files/face1.jpg" alt=""></td>
+                    <td>Noor Atef</td>
+                    <td>110</td>
+                    <td>
+                        <button class="view">View</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="Files/face2.jpg" alt=""></td>
+                    <td>Union</td>
+                    <td>Mahmoud Adel</td>
+                    <td>90</td>
+                    <td>
+                        <button class="view">View</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

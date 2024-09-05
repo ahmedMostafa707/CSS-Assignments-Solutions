@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Assignment</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+
+            .grid-container {
+                background-color: #eee;
+                padding: 40px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas: "one one two three"
+                                        "one one two three"
+                                        "four five five three"
+                                        "four five five three"
+                                        "four six six three"
+                                        "four six six three"
+                                        "seven eight nine ten";
+                gap: 10px;
+            }
+
+            .item-1 {
+                grid-area: one;
+            }
+
+            .item-2 {
+                grid-area: two;
+            }
+
+            .item-3 {
+                grid-area: three;
+            }
+
+            .item-4 {
+                grid-area: four;
+            }
+
+            .item-5 {
+                grid-area: five;
+            }
+
+            .item-6 {
+                grid-area: six;
+            }
+
+            .item-7 {
+                grid-area: seven;
+            }
+
+            .item-8 {
+                grid-area: eight;
+            }
+
+            .item-9 {
+                grid-area: nine;
+            }
+
+            .item-10 {
+                grid-area: ten;
+            }
+
+            .grid-container div {
+                border-bottom: 2px solid orangered;
+                background-color: #fff;
+                line-height: 1.6;
+                padding: 20px 15px;
+                position: relative;
+            }
+
+            .grid-container div::after {
+                content: '"';
+                font-style: italic;
+                font-size: 50px;
+                color: #c6c6c6;
+                position: absolute;
+                bottom: -30px;
+                right: 15px;
+            }
+
+            .grid-container .name {
+                font-size: 18px;
+            }
+
+            .grid-container .job-title {
+                font-weight: bold;
+                font-size: 14px;
+                color: #c6c6c6;
+            }
+
+            .grid-container div .text-1 {
+                font-weight: bold;
+                font-size: 16px;
+                padding: 10px 0;
+            }
+
+            .grid-container div .text-2 {
+                font-size: 14px;
+            }
+
+            .grid-container .black {
+                background-color: #000;
+                color: #fff;
+            }
+
+            .grid-container .black::after {
+                color: #414141;
+            }
+        </style>
+    </head>
+        
+    <body>
+        <div class="grid-container">
+            <div class="item-1 white">
+                <h2 class="name">Osama Mohamed</h2>
+                <p class="job-title">Full-stack Developer</p>
+                <p class="text-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fuga culpa expedita incidunt deleniti possimus enim
+                    dolores. Praesentium vel aliquam voluptates iste sint?
+                    Maxime cupiditate, rerum nobis id corporis in eaque.
+                </p>
+                <p class="text-2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A mollitia
+                    repellendus debitis amet dignissimos, esse ducimus facere optio eaque
+                    iste dolorum veniam. Voluptates eius itaque repellendus esse, ipsam error
+                    voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                    harum optio culpa perferendis exercitationem numquam.
+                </p>
+            </div>
+            <div class="item-2 white">
+                <h2 class="name">Ahmed Sayed</h2>
+                <p class="job-title">IOS Developer</p>
+                <p class="text-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fuga culpa expedita incidunt deleniti
+                </p>
+                <p class="text-2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id
+                    quo delectus, consequatur molestias vel velit iusto blanditiis
+                </p>
+            </div>
+            <div class="item-3 black">
+                <h2 class="name">Shady Nabil</h2>
+                <p class="job-title">Full-Stack Developer</p>
+                <p class="text-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga culpa expedita
+                    incidunt deleniti possimus enim dolores. Praesentium vel aliquam voluptates iste
+                    sint? Maxime cupiditate, rerum nobis id corporis in eaque.
+                </p>
+                <p class="text-2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A mollitia repellendus debitis amet
+                    dignissimos, esse ducimus facere optio eaque iste dolorum veniam. Voluptates elus itaque
+                    repeliendus esse, ipsam error voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Amet harum optio culpa perferendis, voluptas que dolore dolores distinctio dignissimos 
+                    dolorem quas similique beatae qui rem ad magni adipisci exercitationem numquam. Lorem 
+                    ipsum dolor sit amet consectetur adipisicing elit. Nihil saepe earum, quidem dolores repellat 
+                    nostrum laboriosam modi aperiam ex non dignissimos ea, consequuntur autem possimus soluta recusandae est sequi blanditis.
+                </p>
+            </div>
+            <div class="item-4 white">
+                <h2 class="name">Mohamed Ibrahim</h2>
+                <p class="job-title">.Net Developer</p>
+                <p class="text-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fuga culpa expedita incidunt deleniti
+                </p>
+                <p class="text-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolor nemo voluptates maiores fugiat itaque magni
+                    repellendus excepturi laboriosam temporibus, dolores quisquam illum velit? Lorem ipsum dolor sit. amet consectetur adipisicing elit.
+                    Blanditiis, ducimus sequil Rerum totam impedit quasi harum deleniti architecto obcaecati cum voluptatum quos, eos enim id
+                    natus saepe recusandae labore amet. Lorem ipsum dolor sit. amet consectetur adipisicing elt. Aspernatur expedita veniam
+                    voluptatibus quibusdam sapiente atque inventore suscipit, quo debitis blanditis fuga deleniti,
+                    nesciunt cumque, repellendus dolores ex odio fugiat et!
+                </p>
+            </div>
+            <div class="item-5 black">
+                <h2 class="name">Mahmoud Mohamed</h2>
+                <p class="job-title">Full-Stack Developer</p>
+                <p class="text-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga culpa expedita incidunt deleniti possimus enim 
+                    dolores. Praesentium vel aliquam voluptates iste sint? Maxime cupiditate, rerum nobis id corporis in eaque.
+                </p>
+                <p class="text-2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A mollitia repellendus debitis amet dignissimos, esse ducimus facere optio eaque 
+                    iste dolorum veniam. Voluptates eius itaque repellendus esse, ipsam error voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet 
+                    harum optio culpa perferendis, voluptas quo dolore dolores distinctio dignissimos dolorem quas similique beatae qui rem ad magni adipisci exercitationem numquam.
+                </p>
+            </div>
+            <div class="item-6 white">
+                <h2 class="name">Ezz Eldin</h2>
+                <p class="job-title">Front-End Developer</p>
+                <p class="text-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga culpa expedita incidunt deleniti possimus enim 
+                    dolores. Praesentium vel aliquam voluptates iste sint? Maxime cupiditate, rerum nobis id corporis in eaque.
+                </p>
+                <p class="text-2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A mollitia repellendus debitis amet dignissimos, esse ducimus facere optio eaque 
+                    iste dolorum veniam. Voluptates eius itaque repellendus esse, ipsam error voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet 
+                    harum optio culpa perferendis, voluptas quo dolore dolores distinctio dignissimos dolorem quas similique beatae qui rem ad magni adipisci exercitationem numquam.
+                </p>
+            </div>
+            <div class="item-7 white">
+                <h2 class="name">Mohamed Sayed</h2>
+                <p class="job-title">IOS Developer</p>
+                <p class="text-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <p class="text-2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Id quo delectus, consequatur molestias vel
+                </p>
+            </div>
+            <div class="item-8 black">
+                <h2 class="name">Ibrahim Sayed</h2>
+                <p class="job-title">IOS Developer</p>
+                <p class="text-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <p class="text-2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Id quo delectus, consequatur molestias vel
+                </p>
+            </div>
+            <div class="item-9 white">
+                <h2 class="name">Gamal Sayed</h2>
+                <p class="job-title">IOS Developer</p>
+                <p class="text-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <p class="text-2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Id quo delectus, consequatur molestias vel
+                </p>
+            </div>
+            <div class="item-10 white">
+                <h2 class="name">Eman Sayed</h2>
+                <p class="job-title">IOS Developer</p>
+                <p class="text-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <p class="text-2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Id quo delectus, consequatur molestias vel
+                </p>
+            </div> 
+        </div>
+    </body>
+</html>
